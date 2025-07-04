@@ -56,13 +56,13 @@ export default class ForeCalc {
         overlayElement.classList.add('hide');
     }
 
-    displayResults(text) {
+    displayResults(content) {
         const resultsElement = document.getElementById('results');
         if(!resultsElement) {
             throw new Error('Results element not found.');
         }
 
-        resultsElement.querySelector('p').textContent = text;
+        resultsElement.querySelector('p').innerHTML = content;
         resultsElement.classList.remove('hide');
     }
 
