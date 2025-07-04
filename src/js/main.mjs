@@ -27,7 +27,7 @@ export default class ForeCalc {
                         return;
                     }
 
-                    this.displayResults(`It would take approximately ${results.foreskinCount} foreskins to wrap your ${results.productName} like a present. Wow!`);
+                    this.displayResults(`It would take approximately ${results.foreskinCount} foreskins to wrap your <strong>${results.productName}</strong> like a present. Wow!`);
                     resultsElement.classList.remove('hide');
                 });
             } catch(error) {
