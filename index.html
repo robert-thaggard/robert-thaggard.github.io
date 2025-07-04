@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/main.css">
+    <title>ForeCalc</title>
+</head>
+<body>
+    <section>
+        <img src="./src/images/logo.png" title="ForeCalc">
+        <form id="calc">
+            <label>
+                Amazon Product Link
+                <input type="text" id="product-link" name="product-link" placeholder="https://amazon.ca/...">
+            </label>
+            <button type="submit">Calculate</button>
+        </form>
+        <div id="overlay" class="hide">
+            <span class="loader"></span>
+        </div>
+        <div id="results" class="hide">
+            <h2>Results</h2>
+            <p>It would take 315 foreskins to gift wrap your random item here. Wow!</p>
+        </div>
+    </section>
+    <script type="module">
+        import ForeCalc from "./src/js/main.mjs"
+        try {
+            const foreCalc = new ForeCalc("#calc");
+        } catch (error) {
+            console.error("Error initializing ForeCalc:", error);
+        }
+    </script>
+</body>
+</html>
